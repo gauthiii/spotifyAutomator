@@ -2,6 +2,7 @@ import pyautogui
 import time
 from datetime import datetime
 
+
 # Time interval in seconds
 interval = 33
 progress_bar_length = 33  # Length of the progress bar (in characters)
@@ -11,7 +12,7 @@ def change_song():
     # time.sleep(0.5)  # Small delay to ensure the tab is active
 
     # Simulate the "Next" button press
-    pyautogui.hotkey('ctrl', 'right')
+    pyautogui.hotkey('option', 'right')
 
 # Main loop
 i = 0
