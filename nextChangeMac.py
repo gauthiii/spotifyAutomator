@@ -16,6 +16,8 @@ def change_song():
 
 # Main loop
 i = 0
+st=datetime.now()
+startTime=st.strftime("%d/%m/%Y %H:%M:%S")
 try:
     while True:
         for j in range(interval):
@@ -28,5 +30,13 @@ try:
         print(f"\nChanging song: {i}")
         i += 1
 except KeyboardInterrupt:
+
+    et=datetime.now()
+    endTime=et.strftime("%d/%m/%Y %H:%M:%S")
+
+    difference = et - st
+
     print("\nScript stopped manually.")
-    print("\nDate and time =", datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
+    print("\nStarting Date and time =", startTime)
+    print("Completed Date and time =", endTime)
+    print("Code ran for:",difference)
