@@ -4,8 +4,8 @@ from datetime import datetime
 
 
 # Time interval in seconds
-interval = 33
-progress_bar_length = 33  # Length of the progress bar (in characters)
+interval = 120
+progress_bar_length = 120  # Length of the progress bar (in characters)
 
 def change_song():
     # pyautogui.hotkey('command', '1')    # Assumes Spotify is the first tab
