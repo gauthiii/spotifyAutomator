@@ -2,22 +2,18 @@ import pyautogui
 import time
 from datetime import datetime
 
-
 # Time interval in seconds
 interval = 33
 progress_bar_length = 33  # Length of the progress bar (in characters)
 
 def change_song():
-    # pyautogui.hotkey('command', '1')    # Assumes Spotify is the first tab
-    # time.sleep(0.5)  # Small delay to ensure the tab is active
-
-    # Simulate the "Next" button press
-    pyautogui.hotkey('option', 'right')
+    # Simulate pressing the 'j' key for YouTube Music
+    pyautogui.press('j')
 
 # Main loop
 i = 0
-st=datetime.now()
-startTime=st.strftime("%d/%m/%Y %H:%M:%S")
+st = datetime.now()
+startTime = st.strftime("%d/%m/%Y %H:%M:%S")
 try:
     while True:
         for j in range(interval):
@@ -30,13 +26,11 @@ try:
         print(f"\nChanging song: {i}")
         i += 1
 except KeyboardInterrupt:
-
-    et=datetime.now()
-    endTime=et.strftime("%d/%m/%Y %H:%M:%S")
-
+    et = datetime.now()
+    endTime = et.strftime("%d/%m/%Y %H:%M:%S")
     difference = et - st
 
     print("\nScript stopped manually.")
     print("\nStarting Date and time =", startTime)
     print("Completed Date and time =", endTime)
-    print("Code ran for:",difference)
+    print("Code ran for:", difference)
