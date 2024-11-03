@@ -1,3 +1,4 @@
+import random
 import pyautogui
 import time
 from datetime import datetime
@@ -20,6 +21,9 @@ st=datetime.now()
 startTime=st.strftime("%d/%m/%Y %H:%M:%S")
 try:
     while True:
+        # Time interval in seconds
+        interval = random.randint(31, 38)
+        progress_bar_length = interval  # Length of the progress bar (in characters)
         for j in range(interval):
             # Print progress bar
             progress = int((j + 1) / interval * progress_bar_length)
