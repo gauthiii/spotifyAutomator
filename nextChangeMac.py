@@ -13,7 +13,7 @@ def change_song():
     # time.sleep(0.5)  # Small delay to ensure the tab is active
 
     # Simulate the "Next" button press
-    pyautogui.hotkey('option', 'right')
+    pyautogui.hotkey('option', 'right') #check shortcut
 
 # Main loop
 i = 0
